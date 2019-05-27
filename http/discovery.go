@@ -8,7 +8,7 @@ import (
 	"github.com/bilibili/discovery/model"
 
 	gin "github.com/gin-gonic/gin"
-	log "github.com/golang/glog"
+        log "github.com/sirupsen/logrus"
 )
 
 const (

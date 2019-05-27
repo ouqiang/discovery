@@ -4,7 +4,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	log "github.com/golang/glog"
+        log "github.com/sirupsen/logrus"
 )
 
 const (

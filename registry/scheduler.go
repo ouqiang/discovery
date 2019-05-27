@@ -6,7 +6,7 @@ import (
 
 	"github.com/bilibili/discovery/model"
 
-	log "github.com/golang/glog"
+        log "github.com/sirupsen/logrus"
 )
 
 // Scheduler info.

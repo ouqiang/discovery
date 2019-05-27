@@ -18,7 +18,7 @@ import (
 	"github.com/bilibili/discovery/lib/http"
 	xtime "github.com/bilibili/discovery/lib/time"
 
-	log "github.com/golang/glog"
+        log "github.com/sirupsen/logrus"
 )
 
 const (

@@ -11,7 +11,7 @@ import (
 	"github.com/bilibili/discovery/model"
 	"github.com/bilibili/discovery/registry"
 
-	log "github.com/golang/glog"
+        log "github.com/sirupsen/logrus"
 )
 
 var (

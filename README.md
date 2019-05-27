@@ -21,10 +21,8 @@ go build
 
 ### run
 ```shell
-./discovery -conf discovery-example.toml -alsologtostderr
+./discovery -conf discovery-example.toml
 ```
-
-`-alsologtostderr` is `glog`'s flag，means print into stderr. If you hope print into file, can use `-log_dir="/tmp"`. [view glog doc](https://godoc.org/github.com/golang/glog).
 
 ### Configuration
 

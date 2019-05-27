@@ -9,7 +9,7 @@ import (
 
 	"github.com/bilibili/discovery/naming"
 
-	log "github.com/golang/glog"
+        log "github.com/sirupsen/logrus"
 	"google.golang.org/grpc/resolver"
 )
 

@@ -7,7 +7,7 @@ import (
 
 	"github.com/bilibili/discovery/errors"
 
-	log "github.com/golang/glog"
+        log "github.com/sirupsen/logrus"
 )
 
 // InstanceStatus Status of instance

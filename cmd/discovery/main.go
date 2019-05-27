@@ -11,7 +11,7 @@ import (
 	"github.com/bilibili/discovery/discovery"
 	"github.com/bilibili/discovery/http"
 
-	log "github.com/golang/glog"
+	log "github.com/sirupsen/logrus"
 )
 
 func main() {
@@ -33,7 +33,6 @@ func main() {
 			cancel()
 			time.Sleep(time.Second)
 			log.Info("discovery quit !!!")
-			log.Flush()
 			return
 		case syscall.SIGHUP:
 		default:

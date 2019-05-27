@@ -12,7 +12,7 @@ import (
 	"github.com/bilibili/discovery/errors"
 
 	"github.com/gin-gonic/gin"
-	log "github.com/golang/glog"
+        log "github.com/sirupsen/logrus"
 )
 
 const (
