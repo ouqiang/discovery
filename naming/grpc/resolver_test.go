@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/bilibili/discovery/naming"
+	"github.com/ouqiang/discovery/naming"
 
 	"google.golang.org/grpc/resolver"
 )

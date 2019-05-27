@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"sync"
 
-	"github.com/bilibili/discovery/model"
+	"github.com/ouqiang/discovery/model"
 
         log "github.com/sirupsen/logrus"
 )

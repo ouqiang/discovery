@@ -14,9 +14,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	ecode "github.com/bilibili/discovery/errors"
-	"github.com/bilibili/discovery/lib/http"
-	xtime "github.com/bilibili/discovery/lib/time"
+	ecode "github.com/ouqiang/discovery/errors"
+	"github.com/ouqiang/discovery/lib/http"
+	xtime "github.com/ouqiang/discovery/lib/time"
 
         log "github.com/sirupsen/logrus"
 )

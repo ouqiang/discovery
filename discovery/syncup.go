@@ -6,10 +6,10 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/bilibili/discovery/conf"
-	"github.com/bilibili/discovery/errors"
-	"github.com/bilibili/discovery/model"
-	"github.com/bilibili/discovery/registry"
+	"github.com/ouqiang/discovery/conf"
+	"github.com/ouqiang/discovery/errors"
+	"github.com/ouqiang/discovery/model"
+	"github.com/ouqiang/discovery/registry"
 
         log "github.com/sirupsen/logrus"
 )

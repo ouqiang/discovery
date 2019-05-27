@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/bilibili/discovery/naming"
+	"github.com/ouqiang/discovery/naming"
 
         log "github.com/sirupsen/logrus"
 	"google.golang.org/grpc/resolver"

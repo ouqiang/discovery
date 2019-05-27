@@ -1,6 +1,6 @@
 # Discovery 
 [![Build Status](https://travis-ci.org/bilibili/discovery.svg?branch=master)](https://travis-ci.org/bilibili/discovery) 
-[![Go Report Card](https://goreportcard.com/badge/github.com/bilibili/discovery)](https://goreportcard.com/report/github.com/bilibili/discovery)
+[![Go Report Card](https://goreportcard.com/badge/github.com/ouqiang/discovery)](https://goreportcard.com/report/github.com/ouqiang/discovery)
 [![codecov](https://codecov.io/gh/Bilibili/discovery/branch/master/graph/badge.svg)](https://codecov.io/gh/Bilibili/discovery)
 
 Discovery is a based service that is production-ready and primarily used at [Bilibili](https://www.bilibili.com/) for locating services for the purpose of load balancing and failover of middle-tier servers.
@@ -14,7 +14,7 @@ Discovery is a based service that is production-ready and primarily used at [Bil
 ### build
 ```shell
 cd $GOPATH/src
-git clone https://github.com/bilibili/discovery.git
+git clone https://github.com/ouqiang/discovery.git
 cd discovery/cmd/discovery
 go build
 ```

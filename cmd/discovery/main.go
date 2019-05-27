@@ -7,9 +7,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/bilibili/discovery/conf"
-	"github.com/bilibili/discovery/discovery"
-	"github.com/bilibili/discovery/http"
+	"github.com/ouqiang/discovery/conf"
+	"github.com/ouqiang/discovery/discovery"
+	"github.com/ouqiang/discovery/http"
 
 	log "github.com/sirupsen/logrus"
 )

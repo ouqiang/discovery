@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/bilibili/discovery/conf"
-	"github.com/bilibili/discovery/errors"
-	"github.com/bilibili/discovery/model"
+	"github.com/ouqiang/discovery/conf"
+	"github.com/ouqiang/discovery/errors"
+	"github.com/ouqiang/discovery/model"
 
 	. "github.com/smartystreets/goconvey/convey"
 )

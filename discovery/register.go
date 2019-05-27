@@ -3,9 +3,9 @@ package discovery
 import (
 	"context"
 
-	"github.com/bilibili/discovery/errors"
-	"github.com/bilibili/discovery/model"
-	"github.com/bilibili/discovery/registry"
+	"github.com/ouqiang/discovery/errors"
+	"github.com/ouqiang/discovery/model"
+	"github.com/ouqiang/discovery/registry"
 
 	log "github.com/sirupsen/logrus"
 )

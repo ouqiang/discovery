@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/bilibili/discovery/errors"
+	"github.com/ouqiang/discovery/errors"
 
         log "github.com/sirupsen/logrus"
 )

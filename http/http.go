@@ -7,9 +7,9 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/bilibili/discovery/conf"
-	"github.com/bilibili/discovery/discovery"
-	"github.com/bilibili/discovery/errors"
+	"github.com/ouqiang/discovery/conf"
+	"github.com/ouqiang/discovery/discovery"
+	"github.com/ouqiang/discovery/errors"
 
 	"github.com/gin-gonic/gin"
         log "github.com/sirupsen/logrus"

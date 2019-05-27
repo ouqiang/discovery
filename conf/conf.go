@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/bilibili/discovery/lib/http"
+	"github.com/ouqiang/discovery/lib/http"
 
 	"github.com/BurntSushi/toml"
 )
