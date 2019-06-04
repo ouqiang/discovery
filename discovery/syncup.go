@@ -3,8 +3,10 @@ package discovery
 import (
 	"context"
 	"fmt"
-	"net/url"
-	"time"
+        "net"
+        "net/url"
+        "strings"
+        "time"
 
 	"github.com/ouqiang/discovery/conf"
 	"github.com/ouqiang/discovery/errors"
@@ -48,7 +50,32 @@ func (d *Discovery) syncUp() {
 	nodes.UP()
 }
 
+func (d *Discovery) internalIP() string {
+        inters, err := net.Interfaces()
+        if err != nil {
+                return ""
+        }
+        for _, inter := range inters {
+                if !strings.HasPrefix(inter.Name, "lo") {
+                        addrs, err := inter.Addrs()
+                        if err != nil {
+                                continue
+                        }
+                        for _, addr := range addrs {
+                                if ipnet, ok := addr.(*net.IPNet); ok && !ipnet.IP.IsLoopback() {
+                                        if ipnet.IP.To4() != nil {
+                                                return ipnet.IP.String()
+                                        }
+                                }
+                        }
+                }
+        }
+        return ""
+}
+
 func (d *Discovery) regSelf() context.CancelFunc {
+        _, port, _ := net.SplitHostPort(d.c.HTTPServer.Addr)
+        addr := net.JoinHostPort(d.internalIP(), port)
 	ctx, cancel := context.WithCancel(context.Background())
 	now := time.Now().UnixNano()
 	ins := &model.Instance{
@@ -58,7 +85,7 @@ func (d *Discovery) regSelf() context.CancelFunc {
 		Hostname: d.c.Env.Host,
 		AppID:    model.AppID,
 		Addrs: []string{
-			"http://" + d.c.HTTPServer.Addr,
+			"http://" + addr,
 		},
 		Status:          model.InstanceStatusUP,
 		RegTimestamp:    now,
