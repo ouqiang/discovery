@@ -6,6 +6,7 @@ require (
 	github.com/gin-gonic/gin v0.0.0-20180512030042-bf7803815b0b
 	github.com/jtolds/gls v4.20.0+incompatible // indirect
 	github.com/mattn/go-isatty v0.0.7 // indirect
+	github.com/ouqiang/goutil v1.1.2
 	github.com/sirupsen/logrus v1.4.2
 	github.com/smartystreets/assertions v0.0.0-20190401211740-f487f9de1cd3 // indirect
 	github.com/smartystreets/goconvey v0.0.0-20180222194500-ef6db91d284a
