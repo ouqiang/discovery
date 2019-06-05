@@ -559,7 +559,11 @@ func (d *Discovery) polls(ctx context.Context) (apps map[string]*InstancesInfo, 
 		return
 	}
 	info, _ := json.Marshal(res.Data)
-	for _, app := range res.Data {
+	for key, app := range res.Data {
+               if app == nil {
+                       delete(res.Data, key)
+                       continue
+               }
 		if app.LastTs == 0 {
 			err = ecode.ServerErr
 			log.Errorf("discovery: client.Get(%s) latest_timestamp is 0,instances:(%s)", uri+"?"+params.Encode(), info)

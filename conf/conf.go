@@ -2,11 +2,11 @@ package conf
 
 import (
 	"flag"
-	"io/ioutil"
+        "github.com/sirupsen/logrus"
+        "io/ioutil"
 	"os"
 
 	"github.com/ouqiang/discovery/lib/http"
-
 	"github.com/BurntSushi/toml"
 )
 
@@ -22,6 +22,14 @@ var (
 )
 
 func init() {
+        if logLevel := os.Getenv("DISCOVERY_LOG_LEVEL"); logLevel != "" {
+                level, err := logrus.ParseLevel(logLevel)
+                if err != nil {
+                        panic(err)
+                }
+                logrus.SetLevel(level)
+        }
+
 	var err error
 	if hostname, err = os.Hostname(); err != nil || hostname == "" {
 		hostname = os.Getenv("HOSTNAME")
