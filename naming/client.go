@@ -210,7 +210,7 @@ func (d *Discovery) Build(appid string) Resolver {
 		default:
 		}
 	}
-	log.Infof("disocvery: AddWatch(%s) already watch(%v)", appid, ok)
+	log.Debugf("disocvery: AddWatch(%s) already watch(%v)", appid, ok)
 	d.once.Do(func() {
 		go d.serverproc()
 	})
@@ -350,7 +350,7 @@ func (d *Discovery) register(ctx context.Context, ins *Instance) (err error) {
 		err = ec
 		return
 	}
-	log.Infof("discovery: register client.Get(%v) env(%s) appid(%s) addrs(%s) success", uri, c.Env, ins.AppID, ins.Addrs)
+	log.Debugf("discovery: register client.Get(%v) env(%s) appid(%s) addrs(%s) success", uri, c.Env, ins.AppID, ins.Addrs)
 	return
 }
 
@@ -411,7 +411,7 @@ func (d *Discovery) cancel(ins *Instance) (err error) {
 		err = ec
 		return
 	}
-	log.Infof("discovery cancel client.Get(%v)  env(%s) appid(%s) hostname(%s) success",
+	log.Debugf("discovery cancel client.Get(%v)  env(%s) appid(%s) hostname(%s) success",
 		uri, c.Env, ins.AppID, c.Host)
 	return
 }
@@ -455,7 +455,7 @@ func (d *Discovery) set(ctx context.Context, ins *Instance) (err error) {
 		err = ec
 		return
 	}
-	log.Infof("discovery: set client.Get(%v) env(%s) appid(%s) addrs(%s) success", uri+"?"+params.Encode(), conf.Env, ins.AppID, ins.Addrs)
+	log.Debugf("discovery: set client.Get(%v) env(%s) appid(%s) addrs(%s) success", uri+"?"+params.Encode(), conf.Env, ins.AppID, ins.Addrs)
 	return
 }
 
@@ -570,7 +570,7 @@ func (d *Discovery) polls(ctx context.Context) (apps map[string]*InstancesInfo, 
 			return
 		}
 	}
-	log.Infof("discovery: successfully polls(%s) instances (%s)", uri+"?"+params.Encode(), info)
+	log.Debugf("discovery: successfully polls(%s) instances (%s)", uri+"?"+params.Encode(), info)
 	apps = res.Data
 	return
 }
